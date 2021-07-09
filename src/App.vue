@@ -11,9 +11,29 @@ import TodoHeader from "./components/TodoHeader.vue";
 import TodoInput from "./components/TodoInput.vue";
 import TodoList from "./components/TodoList.vue";
 import TodoFooter from "./components/TodoFooter.vue";
+
+import { mapState, mapActions, mapMutations } from "vuex";
 export default {
   name: "App",
   components: { TodoHeader, TodoInput, TodoList, TodoFooter },
+  computed: {
+    ...mapState(["todoItems"]),
+  },
+  methods: {
+    ...mapActions(["updateStorage"]),
+    ...mapMutations(["setTodos"]),
+  },
+  watch: {
+    "$store.state.todoItems": {
+      handler() {
+        this.updateStorage();
+      },
+      deep: true,
+    },
+  },
+  created() {
+    this.setTodos();
+  },
 };
 </script>
 <style>
