@@ -1,8 +1,10 @@
 <template>
   <div id="todo-app">
     <Todo-header></Todo-header>
-    <Todo-input></Todo-input>
-    <Todo-list></Todo-list>
+    <div class="main">
+      <Todo-input></Todo-input>
+      <Todo-list></Todo-list>
+    </div>
     <Todo-footer></Todo-footer>
   </div>
 </template>
@@ -71,5 +73,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#todo-app > .main {
+  /* 속성 */
+  width: 60%;
+  min-width: var(--inner-min-width);
+  max-width: var(--inner-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* style */
+  background-color: white;
+  border-top: 1px solid var(--shadow-gray);
+  box-shadow: 0px 2px 3px 2px var(--shadow-gray);
 }
 </style>

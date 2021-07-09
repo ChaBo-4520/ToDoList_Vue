@@ -20,6 +20,7 @@ let todoStorage = {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
   },
 };
+// filter 함수
 let filters = {
   all: (todos) => todos,
   active: function(todos) {
