@@ -37,6 +37,7 @@ let filters = {
 export default new Vuex.Store({
   state: {
     todoItems: [],
+    visibility: "all",
   },
   getters: {
     filteredTodos(state) {
@@ -69,6 +70,12 @@ export default new Vuex.Store({
         comment: newTodo,
         completed: false,
       });
+    },
+    changeVisibility(state, visibility) {
+      state.visibility = visibility;
+    },
+    removeCompleted(state) {
+      state.todoItems = filters.active(state.todoItems);
     },
   },
 });

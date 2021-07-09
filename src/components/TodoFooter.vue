@@ -1,26 +1,51 @@
 <template>
-  <div class="footer">
+  <div class="footer" v-show="this.todoItems.length">
     <span class="todo-count">
       <strong class="counting">0</strong>
       items left
     </span>
     <div class="filters">
-      <button class="all selected-option" data-key="option" data-value="all">
+      <button
+        @click="changeVisibility('all')"
+        class="all selected-option"
+        data-key="option"
+        data-value="all"
+      >
         All
       </button>
-      <button class="active" data-key="option" data-value="active">
+      <button
+        @click="changeVisibility('active')"
+        class="active"
+        data-key="option"
+        data-value="active"
+      >
         Active
       </button>
-      <button class="completed" data-key="option" data-value="completed">
+      <button
+        @click="changeVisibility('completed')"
+        class="completed"
+        data-key="option"
+        data-value="completed"
+      >
         Completed
       </button>
     </div>
-    <span class="clear-completed">Clear-completed</span>
+    <button class="clear-completed" @click="removeCompleted">
+      Clear-completed
+    </button>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations } from "vuex";
+export default {
+  computed: {
+    ...mapState(["todoItems"]),
+  },
+  methods: {
+    ...mapMutations(["changeVisibility", "removeCompleted"]),
+  },
+};
 </script>
 
 <style></style>

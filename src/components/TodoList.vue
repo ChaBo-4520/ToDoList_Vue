@@ -2,9 +2,14 @@
   <div>
     <ul>
       <li v-for="(todoItem, idx) in filteredTodos" :key="idx">
-        <th>{{ todoItem.id }}</th>
-        <td>{{ todoItem.comment }}</td>
-        <button @click="removeTodo(idx)">X</button>
+        <input type="checkbox" v-model="todoItem.completed" />
+        <label>{{ todoItem.comment }}</label>
+        <button @click="removeTodo(idx)"><i class="fas fa-times"></i></button>
+        <!-- <input
+          type="text"
+          class="edit-description display"
+          onkeydown="updateItemDescription(event)"
+        /> -->
       </li>
     </ul>
   </div>
@@ -27,4 +32,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

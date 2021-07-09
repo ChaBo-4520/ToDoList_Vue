@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="todo-app">
     <Todo-header></Todo-header>
     <Todo-input></Todo-input>
     <Todo-list></Todo-list>
@@ -37,8 +37,39 @@ export default {
 };
 </script>
 <style>
-* {
+:root {
+  /* color */
+  --font-color-header: #c8e6c9;
+  --shadow-gray: #e6e6e6;
+  --white-gray: #f5f5f5;
+  --dark-gray: #656565;
+  /* space */
+  --base-space: 1.1rem;
+  /* font-size */
+  --font-header: 100px;
+  --font-medium: 1.5rem;
+  --font-samll: 1.2rem;
+  /* width, height */
+  --outter-min-width: 26.875rem;
+  --inner-max-width: 34.375rem;
+  --inner-min-width: 21.875rem;
+  --response-width: 50rem;
+}
+html,
+body {
   margin: 0;
   padding: 0;
+}
+body {
+  background-color: var(--white-gray);
+}
+#todo-app {
+  margin: 0 auto;
+  width: 100vw;
+  min-width: var(--outter-min-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
