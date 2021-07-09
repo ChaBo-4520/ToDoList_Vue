@@ -40,7 +40,10 @@ export default new Vuex.Store({
   },
   getters: {
     filteredTodos(state) {
-      return filters[state.visibility](this.todos);
+      return filters[state.visibility](state.todoItems);
+    },
+    remaining(state) {
+      return filters.active(state.todoItems).length;
     },
   },
   actions: {
