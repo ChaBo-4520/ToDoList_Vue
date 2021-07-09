@@ -8,6 +8,12 @@
       </div>
       <Todo-footer></Todo-footer>
     </div>
+    <div class="footer">
+      <p id="app-info">Created by Boram Cha</p>
+      <a href="https://github.com/ChaBo-4520">
+        <i class="fab fa-github"></i> https://github.com/ChaBo-4520
+      </a>
+    </div>
   </div>
 </template>
 <script>
@@ -59,10 +65,17 @@ export default {
   --inner-min-width: 21.875rem;
   --response-width: 50rem;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   margin: 0;
   padding: 0;
+}
+input {
+  margin: 0.3em;
 }
 body {
   background-color: var(--white-gray);
@@ -72,6 +85,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0 0.5em;
 }
 li {
   list-style: none;
@@ -114,5 +128,16 @@ a:hover {
 .main > .items {
   width: 100%;
   box-shadow: 0px -1px 3px 1px var(--shadow-gray);
+}
+#todo-app > .footer {
+  width: 60%;
+  padding-bottom: var(--base-space);
+  color: var(--dark-gray);
+  text-align: center;
+  min-width: var(--inner-min-width);
+  max-width: var(--inner-max-width);
+}
+#todo-app > .footer {
+  margin-top: var(--base-space);
 }
 </style>
