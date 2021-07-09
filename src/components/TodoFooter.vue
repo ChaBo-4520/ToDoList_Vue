@@ -33,9 +33,9 @@
         Completed
       </button>
     </div>
-    <button class="clear-completed" @click="removeCompleted">
+    <div class="clear-completed" @click="removeCompleted">
       Clear-completed
-    </button>
+    </div>
   </div>
 </template>
 

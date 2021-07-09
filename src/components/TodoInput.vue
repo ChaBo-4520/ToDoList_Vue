@@ -1,8 +1,11 @@
 <template>
   <div class="input">
-    <button id="toggle-all">
-      <i class="fas fa-check"></i>
-    </button>
+    <input
+      type="checkbox"
+      class="toggle-complete"
+      :class="remains > 0 ? 'selected-all' : ''"
+      v-show="this.todoItems.length"
+    />
     <input
       type="text"
       class="new-todo"
@@ -18,15 +21,20 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapGetters, mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
       newTodoItem: "",
     };
   },
+  computed: {
+    ...mapGetters(["remains"]),
+    ...mapState(["todoItems"]),
+  },
   methods: {
     addTodo() {
+      console.log(typeof this.remains);
       if (this.newTodoItem == "") return;
       // 입력된 Text의 앞, 뒤 공백문자 제거
       let value = this.newTodoItem && this.newTodoItem.trim();
@@ -80,7 +88,7 @@ button {
 .input .new-todo {
   width: 80%;
   height: 2rem;
-  margin-left: 3.8rem;
+  margin-left: 2.6rem;
   font-size: var(--font-medium);
   padding: 0;
 }
@@ -89,6 +97,24 @@ button {
   min-width: 40px;
   right: 1rem;
   position: absolute;
+  color: var(--shadow-gray);
+}
+.toggle-complete::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.7rem;
+  left: 1rem;
+  top: 1rem;
+
+  padding-right: 0.5rem;
+  width: 3rem;
+  text-align: center;
+  background-color: white;
+}
+.toggle-complete.selected-all {
   color: var(--shadow-gray);
 }
 @media screen and (max-width: 50rem) {
