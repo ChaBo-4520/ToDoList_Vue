@@ -47,6 +47,9 @@ export default new Vuex.Store({
     remaining(state) {
       return filters.active(state.todoItems).length;
     },
+    remains(state) {
+      return filters["active"](state.todoItems).length;
+    },
   },
   actions: {
     getList() {

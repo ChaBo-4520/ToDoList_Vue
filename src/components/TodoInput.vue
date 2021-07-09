@@ -80,7 +80,7 @@ button {
 .input .new-todo {
   width: 80%;
   height: 2rem;
-  margin-left: 3.5rem;
+  margin-left: 3.8rem;
   font-size: var(--font-medium);
   padding: 0;
 }
@@ -90,5 +90,10 @@ button {
   right: 1rem;
   position: absolute;
   color: var(--shadow-gray);
+}
+@media screen and (max-width: 50rem) {
+  .input input[type="text"] {
+    font-size: var(--font-small);
+  }
 }
 </style>

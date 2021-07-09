@@ -3,9 +3,11 @@
     <Todo-header></Todo-header>
     <div class="main">
       <Todo-input></Todo-input>
-      <Todo-list></Todo-list>
+      <div class="items">
+        <Todo-list></Todo-list>
+      </div>
+      <Todo-footer></Todo-footer>
     </div>
-    <Todo-footer></Todo-footer>
   </div>
 </template>
 <script>
@@ -64,12 +66,33 @@ body {
 }
 body {
   background-color: var(--white-gray);
+  overflow-y: scroll;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+
+a {
+  color: none;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 #todo-app {
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   min-width: var(--outter-min-width);
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,5 +110,9 @@ body {
   background-color: white;
   border-top: 1px solid var(--shadow-gray);
   box-shadow: 0px 2px 3px 2px var(--shadow-gray);
+}
+.main > .items {
+  width: 100%;
+  box-shadow: 0px -1px 3px 1px var(--shadow-gray);
 }
 </style>

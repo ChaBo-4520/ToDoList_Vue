@@ -1,17 +1,17 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(todoItem, idx) in filteredTodos" :key="idx">
-        <input type="checkbox" v-model="todoItem.completed" />
-        <label>{{ todoItem.comment }}</label>
-        <button @click="removeTodo(idx)"><i class="fas fa-times"></i></button>
-        <!-- <input
+    <li v-for="(todoItem, idx) in filteredTodos" :key="idx" class="item">
+      <input type="checkbox" v-model="todoItem.completed" />
+      <label>{{ todoItem.comment }}</label>
+      <button @click="removeTodo(idx)" class="delete">
+        <font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon>
+      </button>
+      <!-- <input
           type="text"
           class="edit-description display"
           onkeydown="updateItemDescription(event)"
         /> -->
-      </li>
-    </ul>
+    </li>
   </div>
 </template>
 
@@ -32,4 +32,22 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.item {
+  font-family: "Roboto", sans-serif;
+  padding: var(--base-space);
+  font-size: var(--font-medium);
+  display: flex;
+  position: relative;
+  border: 1px solid var(--shadow-gray);
+  align-items: center;
+}
+.item > label {
+  width: 80%;
+  padding-left: calc(var(--font-medium) + var(--base-space));
+}
+.item > .delete {
+  font-size: var(--font-medium);
+  margin: 0 auto;
+}
+</style>
