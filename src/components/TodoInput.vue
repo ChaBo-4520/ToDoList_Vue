@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     addTodo() {
-      console.log(typeof this.remains);
       if (this.newTodoItem == "") return;
       // 입력된 Text의 앞, 뒤 공백문자 제거
       let value = this.newTodoItem && this.newTodoItem.trim();

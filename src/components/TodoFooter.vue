@@ -2,7 +2,7 @@
   <div class="footer" v-show="this.todoItems.length">
     <span class="todo-count">
       <strong class="counting">{{ remains }}</strong>
-      items left
+      {{ remains | suffix }} left
     </span>
     <div class="filters">
       <button
@@ -45,6 +45,11 @@ export default {
   computed: {
     ...mapState(["todoItems", "visibility"]),
     ...mapGetters(["remains"]),
+  },
+  filters: {
+    suffix(n) {
+      return n == 1 ? "item" : "items";
+    },
   },
   methods: {
     ...mapMutations(["changeVisibility", "removeCompleted"]),
