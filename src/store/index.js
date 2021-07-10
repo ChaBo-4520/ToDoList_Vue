@@ -58,7 +58,7 @@ export default new Vuex.Store({
     updateStorage({ state }) {
       todoStorage.save(state.todoItems);
     },
-    toggleComplete({ getters }) {
+    toggleAllComplete({ getters }) {
       // active된 todo가 하나라도있으면 전부 complete처리
       // this.commit("setAllCompleteState", getters.remains != 0);
       if (getters.remains != 0) this.commit("setAllCompleteState", true);
@@ -84,6 +84,9 @@ export default new Vuex.Store({
     },
     removeCompleted(state) {
       state.todoItems = filters.active(state.todoItems);
+    },
+    toggleCompleted(state, idx) {
+      state.todoItems[idx].completed = !state.todoItems[idx].completed;
     },
     setAllCompleteState(state, complete_state) {
       for (let i = 0; i < state.todoItems.length; i++) {

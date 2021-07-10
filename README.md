@@ -52,10 +52,14 @@ https://todomvc.com/examples/vanillajs/
   - **Update**
     - 가장 왼쪽의 ✔를 클릭하여 모든 목록의 종료 여부를 토글하는 기능 추가
     - 남아있는 todo개수가 1개이면 1item~~s~~ left로 보여주기
+  - **BugFix**
+    - Filter Active상태에서 todo체크시 비정상적인 동작 확인
+      - input[type="checkbox"]를 button으로 수정하고 클릭이벤트를 이용해 completed를 토글해주는 방식으로 변경
 
 ## 추가 예정
 
 - ~~가장 왼쪽의 ✔를 클릭하여 모든 목록의 종료 여부를 토글하는 기능~~
 - ~~남아있는 todo개수가 1개이면 1items left로 보여주기~~
 
-- 버그 : Filter Active상태에서 todo체크시 비정상적인 동작 확인
+- ~~버그 : Filter Active상태에서 todo체크시 비정상적인 동작 확인~~
+- 목록 더블클릭시 todo수정할 수 있는 기능

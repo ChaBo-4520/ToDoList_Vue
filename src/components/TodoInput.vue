@@ -5,7 +5,7 @@
       class="toggle-complete"
       :class="remains > 0 ? 'selected-all' : ''"
       v-show="this.todoItems.length"
-      @click="toggleComplete"
+      @click="toggleAllComplete"
     />
     <input
       type="text"
@@ -45,7 +45,7 @@ export default {
       this.newTodoItem = "";
     },
     ...mapMutations(["pushTodo"]),
-    ...mapActions(["toggleComplete"]),
+    ...mapActions(["toggleAllComplete"]),
   },
 };
 </script>

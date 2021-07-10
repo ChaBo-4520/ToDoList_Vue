@@ -1,7 +1,12 @@
 <template>
   <div>
     <li v-for="(todoItem, idx) in filteredTodos" :key="idx" class="item">
-      <input type="checkbox" v-model="todoItem.completed" />
+      <button
+        class="checkBox"
+        :class="todoItem.completed ? 'completed' : ''"
+        :key="idx"
+        @click="toggleCompleted(todoItem.id)"
+      ></button>
       <label :class="todoItem.completed ? 'completed' : ''">{{
         todoItem.comment
       }}</label>
@@ -26,7 +31,7 @@ export default {
   },
   methods: {
     ...mapActions(["getList"]),
-    ...mapMutations(["removeTodo"]),
+    ...mapMutations(["removeTodo", "toggleCompleted"]),
   },
   created() {
     this.getList();
@@ -44,7 +49,7 @@ export default {
   border: 1px solid var(--shadow-gray);
   align-items: center;
 }
-.item > input[type="checkbox"]::before {
+.item > .checkBox::before {
   content: "\f111";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
@@ -56,8 +61,9 @@ export default {
   top: 0.6rem;
   text-align: center;
   background-color: white;
+  border-radius: 50%;
 }
-.item > input[type="checkbox"]:checked::before {
+.item > .checkBox.completed::before {
   content: "\f058";
   font-family: "Font Awesome 5 Free";
   font-weight: 300;
