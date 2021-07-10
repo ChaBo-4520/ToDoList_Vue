@@ -5,6 +5,7 @@
       class="toggle-complete"
       :class="remains > 0 ? 'selected-all' : ''"
       v-show="this.todoItems.length"
+      @click="toggleComplete"
     />
     <input
       type="text"
@@ -21,7 +22,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState, mapMutations } from "vuex";
+import { mapGetters, mapState, mapMutations, mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -45,6 +46,7 @@ export default {
       this.newTodoItem = "";
     },
     ...mapMutations(["pushTodo"]),
+    ...mapActions(["toggleComplete"]),
   },
 };
 </script>

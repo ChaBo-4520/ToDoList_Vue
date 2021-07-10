@@ -20,6 +20,7 @@ let todoStorage = {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
   },
 };
+
 // filter 함수
 let filters = {
   all: (todos) => todos,
@@ -44,9 +45,6 @@ export default new Vuex.Store({
     filteredTodos(state) {
       return filters[state.visibility](state.todoItems);
     },
-    remaining(state) {
-      return filters.active(state.todoItems).length;
-    },
     remains(state) {
       return filters["active"](state.todoItems).length;
     },
@@ -59,6 +57,12 @@ export default new Vuex.Store({
     },
     updateStorage({ state }) {
       todoStorage.save(state.todoItems);
+    },
+    toggleComplete({ getters }) {
+      // active된 todo가 하나라도있으면 전부 complete처리
+      // this.commit("setAllCompleteState", getters.remains != 0);
+      if (getters.remains != 0) this.commit("setAllCompleteState", true);
+      else this.commit("setAllCompleteState", false);
     },
   },
   mutations: {
@@ -80,6 +84,11 @@ export default new Vuex.Store({
     },
     removeCompleted(state) {
       state.todoItems = filters.active(state.todoItems);
+    },
+    setAllCompleteState(state, complete_state) {
+      for (let i = 0; i < state.todoItems.length; i++) {
+        state.todoItems[i].completed = complete_state;
+      }
     },
   },
 });
