@@ -24,8 +24,6 @@
 
 ## 참고디자인
 
-## 참고디자인
-
 https://todomvc.com/examples/vanillajs/
 
 ## 기능 설명
@@ -55,11 +53,16 @@ https://todomvc.com/examples/vanillajs/
   - **BugFix**
     - Filter Active상태에서 todo체크시 비정상적인 동작 확인
       - input[type="checkbox"]를 button으로 수정하고 클릭이벤트를 이용해 completed를 토글해주는 방식으로 변경
+- **2021.07.11**
+  - **Update**
+    - 목록 더블클릭시 todo수정할 수 있는 기능추가
 
 ## 추가 예정
 
 - ~~가장 왼쪽의 ✔를 클릭하여 모든 목록의 종료 여부를 토글하는 기능~~
 - ~~남아있는 todo개수가 1개이면 1items left로 보여주기~~
-
 - ~~버그 : Filter Active상태에서 todo체크시 비정상적인 동작 확인~~
-- 목록 더블클릭시 todo수정할 수 있는 기능
+- ~~목록 더블클릭시 todo수정할 수 있는 기능~~
+- 목록에 hover시 삭제버튼 보이게함
+- 목록 삭제 및 완료된 항목 삭제시 confirm으로 확인하기
+- 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
