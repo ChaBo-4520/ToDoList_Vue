@@ -70,7 +70,10 @@ export default new Vuex.Store({
       state.todoItems = todoStorage.fetch();
     },
     removeTodo(state, idx) {
-      state.todoItems.splice(idx, 1);
+      if (confirm("정말 삭제하시겠습니까?")) {
+        state.todoItems.splice(idx, 1);
+        alert("삭제되었습니다.");
+      }
     },
     pushTodo(state, newTodo) {
       state.todoItems.push({
@@ -83,7 +86,10 @@ export default new Vuex.Store({
       state.visibility = visibility;
     },
     removeCompleted(state) {
-      state.todoItems = filters.active(state.todoItems);
+      if (confirm("완료한 항목을 삭제하시겠습니까?")) {
+        state.todoItems = filters.active(state.todoItems);
+        alert("완료한 항목을 삭제했습니다.");
+      }
     },
     toggleCompleted(state, idx) {
       state.todoItems[idx].completed = !state.todoItems[idx].completed;
