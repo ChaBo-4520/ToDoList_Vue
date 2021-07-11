@@ -130,19 +130,24 @@ export default {
   right: 0;
   width: 2em;
   font-size: var(--font-medium);
+  display: none;
+}
+.item:hover > .delete {
+  display: block;
 }
 .item .content {
+  position: absolute;
   display: flex;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 65%;
+  margin-left: 3em;
 }
 .item .content > label {
   display: block;
   position: absolute;
-  width: 65%;
+  width: 100%;
   height: 1.6em;
-  left: 3.45em;
   color: black;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -152,11 +157,10 @@ export default {
   font-family: "Roboto", sans-serif;
   font-size: var(--font-medium);
   position: absolute;
-  width: 67%;
+  width: 100%;
   height: 100%;
   padding-left: calc(var(--base-space) / 5);
   box-sizing: border-box;
-  left: 3.2em;
   background-color: white;
   margin: 0;
   border: 1px solid black;

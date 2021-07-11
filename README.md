@@ -56,6 +56,10 @@ https://todomvc.com/examples/vanillajs/
 - **2021.07.11**
   - **Update**
     - 목록 더블클릭시 todo수정할 수 있는 기능추가
+    - 목록에 hover시 삭제버튼 보이게함
+  - **BuxFix**
+    - div.content크기 오류로 체크박스 클릭안되는 문제
+      - content크기 재설정으로 해결
 
 ## 추가 예정
 
@@ -63,6 +67,7 @@ https://todomvc.com/examples/vanillajs/
 - ~~남아있는 todo개수가 1개이면 1items left로 보여주기~~
 - ~~버그 : Filter Active상태에서 todo체크시 비정상적인 동작 확인~~
 - ~~목록 더블클릭시 todo수정할 수 있는 기능~~
-- 목록에 hover시 삭제버튼 보이게함
+- ~~목록에 hover시 삭제버튼 보이게함~~
 - 목록 삭제 및 완료된 항목 삭제시 confirm으로 확인하기
 - 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
+- ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
