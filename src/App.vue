@@ -125,8 +125,7 @@ a:hover {
 
   /* style */
   background-color: white;
-  border-top: 2px solid var(--shadow-gray);
-  border-bottom: 2px solid var(--shadow-gray);
+  border: 1px solid var(--shadow-gray);
 
   box-shadow: 0 25px 50px 0 rgb(0 0 0 / 10%);
 }

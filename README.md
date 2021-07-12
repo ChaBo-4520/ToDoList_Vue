@@ -70,6 +70,10 @@ https://todomvc.com/examples/vanillajs/
     - 전체적인 Color잡기
       - 버튼들 색 변경
       - 필터div 위치 조정
+      - footer아래 디자인 추가
+      - filter위치 조정
+      - list사이 border조정
+      - 전체적인 shadow조정
   - **BugFix**
     - 체크박스 더블클릭시에도 항목 수정이 동작하는 문제 해결
       - div.content로 editTodo메소드 이동
