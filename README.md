@@ -61,6 +61,9 @@ https://todomvc.com/examples/vanillajs/
   - **BugFix**
     - div.content크기 오류로 체크박스 클릭안되는 문제
       - content크기 재설정으로 해결
+- **2021.07.12**
+  - **Refactoring**
+    - TodoList.vue에서 getList action을 불러오던것을 App.vue가 created가 될 때 동작하도록 변경
 
 ## 추가 예정
 
@@ -72,3 +75,4 @@ https://todomvc.com/examples/vanillajs/
 - ~~목록 삭제 및 완료된 항목 삭제시 confirm으로 확인하기~~
 - 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
+
