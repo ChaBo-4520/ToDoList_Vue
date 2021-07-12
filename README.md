@@ -90,3 +90,5 @@ https://todomvc.com/examples/vanillajs/
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
 - ~~전체적인 Color잡기~~
 - Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경
+
+- 오른쪽 아래에 메뉴얼 추가
