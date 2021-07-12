@@ -100,7 +100,8 @@ export default {
   font-size: var(--font-medium);
   display: flex;
   position: relative;
-  border: 1px solid var(--shadow-gray);
+  border-top: 1px solid var(--shadow-gray);
+  border-bottom: 1px solid var(--shadow-gray);
   align-items: center;
 }
 .item > .checkBox::before {
@@ -109,6 +110,7 @@ export default {
   font-weight: 400;
   position: absolute;
   cursor: pointer;
+  color: var(--shadow-gray);
 
   font-size: 2.5rem;
   left: 1.2rem;
@@ -127,7 +129,7 @@ export default {
   left: 1.2rem;
   top: 0.6rem;
   text-align: center;
-  color: black;
+  color: var(--dark-gray);
 }
 .item > .completed {
   color: var(--dark-gray);
@@ -138,6 +140,7 @@ export default {
   right: 0;
   width: 2em;
   font-size: var(--font-medium);
+  color: var(--shadow-gray);
   display: none;
 }
 .item:hover > .delete {
@@ -154,12 +157,14 @@ export default {
 .item .content > label {
   display: block;
   position: absolute;
+  margin: auto 0;
   width: 100%;
   height: 1.6em;
   color: black;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 1.5;
 }
 .item .content .edit {
   font-family: "Roboto", sans-serif;

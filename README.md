@@ -67,6 +67,9 @@ https://todomvc.com/examples/vanillajs/
   - **Design**
     - input과 li를 조금 더 반응형으로 수정
     - input의 placeholder만 반응형으로 변경
+    - 전체적인 Color잡기
+      - 버튼들 색 변경
+      - 필터div 위치 조정
   - **BugFix**
     - 체크박스 더블클릭시에도 항목 수정이 동작하는 문제 해결
       - div.content로 editTodo메소드 이동
@@ -82,4 +85,4 @@ https://todomvc.com/examples/vanillajs/
 - 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
 - 전체적인 Color잡기
-
+- Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경

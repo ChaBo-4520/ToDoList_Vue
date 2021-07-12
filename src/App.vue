@@ -64,6 +64,7 @@ export default {
   /* width, height */
   --outter-min-width: 26.875rem;
   --inner-max-width: 34.375rem;
+  --inner-max-width: 38.375rem;
   --inner-min-width: 21.875rem;
   --response-width: 50rem;
 }
@@ -115,7 +116,7 @@ a:hover {
 }
 #todo-app > .main {
   /* 속성 */
-  width: 60%;
+  width: 80%;
   min-width: var(--inner-min-width);
   max-width: var(--inner-max-width);
   display: flex;
@@ -124,12 +125,13 @@ a:hover {
 
   /* style */
   background-color: white;
-  border-top: 1px solid var(--shadow-gray);
-  box-shadow: 0px 2px 3px 2px var(--shadow-gray);
+  border-top: 2px solid var(--shadow-gray);
+  border-bottom: 2px solid var(--shadow-gray);
+
+  box-shadow: 0 25px 50px 0 rgb(0 0 0 / 10%);
 }
 .main > .items {
   width: 100%;
-  box-shadow: 0px -1px 3px 1px var(--shadow-gray);
 }
 #todo-app > .footer {
   width: 60%;
@@ -140,6 +142,6 @@ a:hover {
   max-width: var(--inner-max-width);
 }
 #todo-app > .footer {
-  margin-top: var(--base-space);
+  margin-top: calc(2 * var(--base-space));
 }
 </style>

@@ -71,7 +71,30 @@ export default {
   color: var(--dark-gray);
   font-size: var(--font-small);
 }
+.footer::after {
+  content: "";
+  position: absolute;
+  left: 1%;
+  bottom: -0.6em;
+  height: 1em;
+  width: 98%;
+  border: 1px solid var(--shadow-gray);
+  background-color: white;
+  z-index: -1;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 2%;
+  bottom: -1.1em;
+  height: 1em;
+  width: 96%;
+  border: 1px solid var(--shadow-gray);
+  background-color: white;
+  z-index: -1;
+}
 .footer span {
+  position: absolute;
   height: 1rem;
   display: flex;
   align-items: center;
@@ -81,13 +104,16 @@ export default {
   margin-right: 0.2rem;
 }
 .footer .clear-completed {
+  position: absolute;
+  right: var(--base-space);
   z-index: 1;
   cursor: pointer;
+  top: 1.25em;
+  line-height: -5px;
 }
 .footer .filters {
   width: 100%;
   height: 2rem;
-  position: absolute;
   left: 0;
   display: flex;
   justify-content: center;
@@ -99,21 +125,20 @@ export default {
   font-size: var(--font-small);
   margin: 0 0.2rem;
   box-sizing: border-box;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 5px;
 }
 .footer .filters > button:hover {
-  border: 1px solid black;
+  border: 3px solid var(--font-color-header);
   box-sizing: border-box;
 }
 .footer .filters .selected-option {
-  border: 1px solid black;
-  background-color: var(--white-gray);
+  border: 3px solid var(--font-color-header);
 }
 
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 40rem) {
   .footer {
-    height: 5rem;
+    height: 5.5rem;
   }
   .footer span {
     margin-top: 0;
@@ -122,9 +147,9 @@ export default {
   }
   .footer .filters {
     position: absolute;
+    margin-top: var(--base-space);
     display: flex;
     width: 100%;
-    left: 0;
     justify-content: center;
     box-sizing: border-box;
     bottom: 0.5rem;

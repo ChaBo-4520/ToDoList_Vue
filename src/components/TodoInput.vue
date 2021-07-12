@@ -111,15 +111,20 @@ button {
   text-align: center;
   background-color: white;
 }
+.toggle-complete {
+  color: var(--dark-gray);
+}
 .toggle-complete.selected-all {
   color: var(--shadow-gray);
 }
 @media screen and (max-width: 50rem) {
-  .input input[type="text"]:placeholder-shown {
-    font-size: var(--font-small);
-  }
   .input input[type="text"] {
     width: 78%;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .input input[type="text"]:placeholder-shown {
+    font-size: var(--font-small);
   }
 }
 </style>
