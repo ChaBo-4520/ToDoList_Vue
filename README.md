@@ -88,5 +88,5 @@ https://todomvc.com/examples/vanillajs/
 - ~~목록 삭제 및 완료된 항목 삭제시 confirm으로 확인하기~~
 - 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
-- 전체적인 Color잡기
+- ~~전체적인 Color잡기~~
 - Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경
