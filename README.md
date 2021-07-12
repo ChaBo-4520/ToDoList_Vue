@@ -67,6 +67,9 @@ https://todomvc.com/examples/vanillajs/
   - **Design**
     - input과 li를 조금 더 반응형으로 수정
     - input의 placeholder만 반응형으로 변경
+  - **BugFix**
+    - 체크박스 더블클릭시에도 항목 수정이 동작하는 문제 해결
+      - div.content로 editTodo메소드 이동
 
 ## 추가 예정
 

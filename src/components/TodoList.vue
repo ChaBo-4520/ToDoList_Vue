@@ -8,7 +8,6 @@
         completed: todoItem.completed,
         editing: todoItem.id == cachedId,
       }"
-      @dblclick="editTodo(todoItem)"
     >
       <button
         class="checkBox"
@@ -16,7 +15,7 @@
         :key="idx"
         @click="toggleCompleted(todoItem.id)"
       ></button>
-      <div class="content">
+      <div class="content" @dblclick="editTodo(todoItem)">
         <label :class="todoItem.completed ? 'completed' : ''"
           >{{ todoItem.comment }}
         </label>
