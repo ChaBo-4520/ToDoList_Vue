@@ -149,7 +149,7 @@ export default {
   display: flex;
   align-items: center;
   height: 100%;
-  width: 65%;
+  width: 80%;
   margin-left: 3em;
 }
 .item .content > label {
@@ -177,5 +177,11 @@ export default {
 }
 .item.editing .edit {
   display: inline;
+}
+
+@media screen and (max-width: 50rem) {
+  .item .content {
+    width: 72%;
+  }
 }
 </style>

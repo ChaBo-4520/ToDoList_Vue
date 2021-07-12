@@ -82,23 +82,17 @@ button {
   align-items: center;
   text-align: center;
 }
-.input #toggle-all {
-  width: 10%;
-  min-width: 40px;
-  left: 1rem;
-  position: absolute;
-}
 .input .new-todo {
-  width: 80%;
+  width: 83%;
   height: 2rem;
-  margin-left: 2.6rem;
+  margin-left: 2rem;
   font-size: var(--font-medium);
   padding: 0;
 }
 #clear-text {
   width: 10%;
   min-width: 40px;
-  right: 1rem;
+  right: 0;
   position: absolute;
   color: var(--shadow-gray);
 }
@@ -112,7 +106,7 @@ button {
   left: 1rem;
   top: 1rem;
 
-  padding-right: 0.5rem;
+  margin-right: 0.5rem;
   width: 3rem;
   text-align: center;
   background-color: white;
@@ -121,8 +115,11 @@ button {
   color: var(--shadow-gray);
 }
 @media screen and (max-width: 50rem) {
-  .input input[type="text"] {
+  .input input[type="text"]:placeholder-shown {
     font-size: var(--font-small);
+  }
+  .input input[type="text"] {
+    width: 78%;
   }
 }
 </style>
