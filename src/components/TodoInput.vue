@@ -26,6 +26,7 @@ import { mapGetters, mapState, mapMutations, mapActions } from "vuex";
 export default {
   data() {
     return {
+      // 새로 추가되는 todo
       newTodoItem: "",
     };
   },
@@ -34,10 +35,11 @@ export default {
     ...mapState(["todoItems"]),
   },
   methods: {
+    // todo 추가시키기
     addTodo() {
       if (this.newTodoItem == "") return;
       // 입력된 Text의 앞, 뒤 공백문자 제거
-      let value = this.newTodoItem && this.newTodoItem.trim();
+      let value = this.newTodoItem.trim();
       this.pushTodo(value);
       this.clearInputbox();
     },

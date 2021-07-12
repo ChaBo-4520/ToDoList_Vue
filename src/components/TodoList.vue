@@ -43,6 +43,7 @@ import { mapState, mapActions, mapMutations, mapGetters } from "vuex";
 export default {
   data() {
     return {
+      // 수정되기 전 상태를 저장하기 위한 cache값
       cachedId: null,
       cachedComment: "",
     };
@@ -52,10 +53,15 @@ export default {
     ...mapGetters(["filteredTodos"]),
   },
   methods: {
+    // todo를 수정하는 메소드
+    // 항목의 id와 comment를 cache해둔다.
     editTodo(todo) {
       this.cachedId = todo.id;
       this.cachedComment = todo.comment;
     },
+    // todo 수정을 완료하는 메소드
+    // cache된 id를 초기화하고
+    // 수정된 comment를 trim해준다. 만약 내용을 모두 지웠다면 취소시킨다.
     doneEdit(todo) {
       this.cachedId = null;
       todo.comment = todo.comment.trim();
@@ -63,6 +69,9 @@ export default {
         this.cancelEdit(todo);
       }
     },
+    // todo 수정을 취소하는 메소드
+    // cache된 id를 초기화하고
+    // 수정된 comment를 cache된 comment로 초기화시킨다.
     cancelEdit(todo) {
       this.cachedId = null;
       todo.comment = this.cachedComment;
@@ -71,14 +80,14 @@ export default {
     ...mapMutations(["removeTodo", "toggleCompleted"]),
   },
   directives: {
+    // 사용자 지정 directive
+    // binding.value가 true이면(항목의 id와 cache된 id가 같으면)
+    // 해당 엘리먼트에 focus
     "todo-focus": function(el, binding) {
       if (binding.value) {
         el.focus();
       }
     },
-  },
-  created() {
-    this.getList();
   },
 };
 </script>

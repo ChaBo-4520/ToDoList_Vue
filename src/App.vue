@@ -22,7 +22,7 @@ import TodoInput from "./components/TodoInput.vue";
 import TodoList from "./components/TodoList.vue";
 import TodoFooter from "./components/TodoFooter.vue";
 
-import { mapState, mapActions, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "App",
   components: { TodoHeader, TodoInput, TodoList, TodoFooter },
@@ -30,19 +30,21 @@ export default {
     ...mapState(["todoItems"]),
   },
   methods: {
-    ...mapActions(["updateStorage"]),
-    ...mapMutations(["setTodos"]),
+    ...mapActions(["updateStorage", "getList"]),
   },
   watch: {
+    // Vuex의 state에 저장된 todoItems에 변경이 있으면 LocalStorage를 업데이트
     "$store.state.todoItems": {
       handler() {
         this.updateStorage();
       },
+      // object나 array의 item변경까지 감지
       deep: true,
     },
   },
+  // created될 때, localstorage로 부터 todoList를 받아온다.
   created() {
-    this.setTodos();
+    this.getList();
   },
 };
 </script>

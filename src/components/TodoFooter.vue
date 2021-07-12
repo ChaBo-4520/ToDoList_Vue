@@ -47,6 +47,8 @@ export default {
     ...mapGetters(["remains"]),
   },
   filters: {
+    // 사용자 지정 filter
+    // 이전 filter로 받은 return값이 1이면 item, 아니면 items를 반환
     suffix(n) {
       return n == 1 ? "item" : "items";
     },
