@@ -55,6 +55,9 @@ export default new Vuex.Store({
     remains(state) {
       return filters["active"](state.todoItems).length;
     },
+    numberOfCompleted(state) {
+      return filters["completed"](state.todoItems).length;
+    },
   },
   actions: {
     // LocalStorage로부터 Todo를 받아오는 명령

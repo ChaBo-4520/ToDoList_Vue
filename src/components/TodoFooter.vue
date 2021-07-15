@@ -33,7 +33,11 @@
         Completed
       </button>
     </div>
-    <div class="clear-completed" @click="removeCompleted">
+    <div
+      class="clear-completed"
+      @click="removeCompleted"
+      v-show="numberOfCompleted != 0"
+    >
       Clear-completed
     </div>
   </div>
@@ -44,7 +48,7 @@ import { mapState, mapMutations, mapGetters } from "vuex";
 export default {
   computed: {
     ...mapState(["todoItems", "visibility"]),
-    ...mapGetters(["remains"]),
+    ...mapGetters(["remains", "numberOfCompleted"]),
   },
   filters: {
     // 사용자 지정 filter

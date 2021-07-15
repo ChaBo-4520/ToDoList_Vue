@@ -77,6 +77,9 @@ https://todomvc.com/examples/vanillajs/
   - **BugFix**
     - 체크박스 더블클릭시에도 항목 수정이 동작하는 문제 해결
       - div.content로 editTodo메소드 이동
+- **2021.07.15**
+  - **Design**
+    - Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경
 
 ## 추가 예정
 
@@ -86,9 +89,9 @@ https://todomvc.com/examples/vanillajs/
 - ~~목록 더블클릭시 todo수정할 수 있는 기능~~
 - ~~목록에 hover시 삭제버튼 보이게함~~
 - ~~목록 삭제 및 완료된 항목 삭제시 confirm으로 확인하기~~
-- 반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)
+- ~~반응형으로 input 글자크기 수정하기. (placeholder만 작아지게)~~
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
 - ~~전체적인 Color잡기~~
-- Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경
+- ~~Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경~~
 
 - 오른쪽 아래에 메뉴얼 추가
