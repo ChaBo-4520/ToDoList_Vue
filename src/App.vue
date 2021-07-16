@@ -14,6 +14,9 @@
         <i class="fab fa-github"></i> https://github.com/ChaBo-4520
       </a>
     </div>
+    <div class="manual">
+      <todo-manual></todo-manual>
+    </div>
   </div>
 </template>
 <script>
@@ -21,11 +24,12 @@ import TodoHeader from "./components/TodoHeader.vue";
 import TodoInput from "./components/TodoInput.vue";
 import TodoList from "./components/TodoList.vue";
 import TodoFooter from "./components/TodoFooter.vue";
+import TodoManual from "./components/TodoManual.vue";
 
 import { mapState, mapActions } from "vuex";
 export default {
   name: "App",
-  components: { TodoHeader, TodoInput, TodoList, TodoFooter },
+  components: { TodoHeader, TodoInput, TodoList, TodoFooter, TodoManual },
   computed: {
     ...mapState(["todoItems"]),
   },
@@ -142,5 +146,20 @@ a:hover {
 }
 #todo-app > .footer {
   margin-top: calc(2 * var(--base-space));
+}
+#todo-app > .manual {
+  position: fixed;
+  height: 3em;
+  width: 3em;
+
+  right: 3%;
+  bottom: 3%;
+}
+
+@media screen and (max-width: 37.5em) {
+  #todo-app > .manual {
+    height: 2em;
+    width: 2em;
+  }
 }
 </style>

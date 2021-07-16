@@ -8,7 +8,7 @@
 
 **사용기술** : HTML, Css, **Vue.js**✨
 
-**Plugin : Vuex, vue-router, fontawesome**
+**Plugin : Vuex, vue-router, fontawesome, bootstrap**
 
 <img src="./img/화면.gif">
 
@@ -80,6 +80,9 @@ https://todomvc.com/examples/vanillajs/
 - **2021.07.15**
   - **Design**
     - Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경
+- **2021.07.16**
+  - **Add**
+    - bootstrap플러그인 추가
 
 ## 추가 예정
 

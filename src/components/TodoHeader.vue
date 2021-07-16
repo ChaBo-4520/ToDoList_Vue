@@ -23,4 +23,10 @@ export default {};
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 48em) {
+  .wrapper {
+    font-size: 2em;
+  }
+}
 </style>
