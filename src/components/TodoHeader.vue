@@ -18,6 +18,7 @@ export default {};
   font-size: var(--font-header);
   color: var(--font-color-header);
   font-weight: 100;
+  font-size: 7em;
   min-width: var(--outter-min-width);
   text-align: center;
   margin: 0;

@@ -83,6 +83,8 @@ https://todomvc.com/examples/vanillajs/
 - **2021.07.16**
   - **Add**
     - bootstrap플러그인 추가
+  - **Design**
+    - 헤더 사이즈 변경
 
 ## 추가 예정
 
