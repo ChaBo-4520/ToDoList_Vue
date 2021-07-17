@@ -29,5 +29,13 @@ export default {};
   .wrapper {
     font-size: 2em;
   }
+  .header > h1 {
+    font-size: 6em;
+  }
+}
+@media screen and (max-width: 31.25em) {
+  .header > h1 {
+    font-size: 4.5em;
+  }
 }
 </style>
