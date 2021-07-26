@@ -90,6 +90,7 @@ https://todomvc.com/examples/vanillajs/
     - v-click-outside 모듈 추가.
       - 외부 클릭 감지를 도와주는 모듈
       - [레퍼런스](https://www.npmjs.com/package/v-click-outside)
+    - 툴팁 외부 클릭시 툴팁 사라지는 기능 추가
 
 ## 추가 예정
 
@@ -103,6 +104,6 @@ https://todomvc.com/examples/vanillajs/
 - ~~버그 : div.content크기 오류로 체크박스 클릭안되는 문제 수정필요~~
 - ~~전체적인 Color잡기~~
 - ~~Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경~~
-- 오른쪽 아래에 메뉴얼 추가
+- ~~오른쪽 아래에 메뉴얼 추가~~
 - 버그 : clear-complete클릭 후 비정상적인 동작 => 남은 항목들에 대한 컨트롤이 불가능함
-- 툴팁 외부 클릭시 툴팁 사라지기
+- ~~툴팁 외부 클릭시 툴팁 사라지기~~
