@@ -85,6 +85,11 @@ https://todomvc.com/examples/vanillajs/
     - bootstrap플러그인 추가
   - **Design**
     - 헤더 사이즈 변경
+- **2021.07.26**
+  - **Add**
+    - v-click-outside 모듈 추가.
+      - 외부 클릭 감지를 도와주는 모듈
+      - [레퍼런스](https://www.npmjs.com/package/v-click-outside)
 
 ## 추가 예정
 
