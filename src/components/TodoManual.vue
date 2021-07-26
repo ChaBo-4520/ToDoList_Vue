@@ -6,8 +6,9 @@
       placement="topleft"
       custom-class="tooltip"
       triggers="click"
+      :show.sync="tooltipState"
     >
-      <div class="content">
+      <div class="content" v-click-outside="onClickOutside">
         로컬 스토리지를 사용하는 TodoList입니다. <br />
         새로운 할 일을 추가해 사용해보세요!<br />
         추가된 항목을 더블클릭하여 내용을 수정할 수 있습니다.
@@ -17,7 +18,22 @@
 </template>
 
 <script>
-export default {};
+import vClickOutside from "v-click-outside";
+export default {
+  data() {
+    return {
+      tooltipState: false,
+    };
+  },
+  methods: {
+    onClickOutside() {
+      this.tooltipState = false;
+    },
+  },
+  directives: {
+    clickOutside: vClickOutside.directive,
+  },
+};
 </script>
 
 <style scoped>
