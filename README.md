@@ -100,3 +100,4 @@ https://todomvc.com/examples/vanillajs/
 - ~~Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경~~
 - 오른쪽 아래에 메뉴얼 추가
 - 버그 : clear-complete클릭 후 비정상적인 동작 => 남은 항목들에 대한 컨트롤이 불가능함
+- 툴팁 외부 클릭시 툴팁 사라지기
