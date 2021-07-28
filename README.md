@@ -91,6 +91,11 @@ https://todomvc.com/examples/vanillajs/
       - 외부 클릭 감지를 도와주는 모듈
       - [레퍼런스](https://www.npmjs.com/package/v-click-outside)
     - 툴팁 외부 클릭시 툴팁 사라지는 기능 추가
+- **2021.07.28**
+  - **BugFix**
+    - 버그 : clear-complete클릭 후 비정상적인 동작 => 남은 항목들에 대한 컨트롤이 불가능함
+      - togglecompleted로 넘겨주는 list번호를 id로 넘겨주어 문제 발생
+      - idx로 넘겨주어 문제해결
 
 ## 추가 예정
 
@@ -105,5 +110,5 @@ https://todomvc.com/examples/vanillajs/
 - ~~전체적인 Color잡기~~
 - ~~Clear-completed버튼이 complete된 항목이 있을 때 나타나도록 변경~~
 - ~~오른쪽 아래에 메뉴얼 추가~~
-- 버그 : clear-complete클릭 후 비정상적인 동작 => 남은 항목들에 대한 컨트롤이 불가능함
+- ~~버그 : clear-complete클릭 후 비정상적인 동작 => 남은 항목들에 대한 컨트롤이 불가능함~~
 - ~~툴팁 외부 클릭시 툴팁 사라지기~~

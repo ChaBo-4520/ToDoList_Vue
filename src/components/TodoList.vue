@@ -13,7 +13,7 @@
         class="checkBox"
         :class="todoItem.completed ? 'completed' : ''"
         :key="idx"
-        @click="toggleCompleted(todoItem.id)"
+        @click="toggleCompleted(idx)"
       ></button>
       <div class="content" @dblclick="editTodo(todoItem)">
         <label :class="todoItem.completed ? 'completed' : ''"
